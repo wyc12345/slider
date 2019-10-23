@@ -4,17 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>VM</title>
+    <title>Document</title>
     <style>
-        body{
-            background-color: #000;
+        *{
+            margin: 0;
+            padding: 0;
         }
-        h1{
-            color: #FFF;
+        img{
+            width: 100%;
+            height: 100vh;
+            display: block;
+        }
+        .bc{
+            width: 100%;
+            position: fixed;
+            animation: run 16s infinite;
+            
+        }
+        @keyframes run {
+            0%   { top: 0%; }
+            20%  { top: 0%; }
+            25%  { top: -100%; }
+            45%  { top: -100%; }
+            50%  { top: -200%; }
+            70%  { top: -200%; }
+            75%  { top: -300%; }
+            95%  { top: -300%; }
+            100% { top: -400%; }
+        }
+        
+        /* plus++++++++ */
+        .window{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-top: -90px;
+            margin-left: -210px;
+            width: 420px;
+            height: 180px;
+            z-index: 999;
+            overflow: hidden;
+            mix-blend-mode: lighten;
+        }
+        .spring, .summer, .autumn, .winter{
+            display: block;
+            width: 420px;
+            height: 180px;
+            color: #000;
+            background-color: #fff;
+            font-size: 100px;
+            font-weight: bolder;
+            line-height: 180px;
+            text-align: center;
+            z-index: 999;
+        }
+        .box{
+            position: absolute;
+            top: 0px;
+            animation: down 16s infinite;
+        }
+        @keyframes down {
+            0%   { top: 0px; }
+            20%  { top: 0px; }
+            25%  { top: -180px; }
+            45%  { top: -180px; }
+            50%  { top: -360px; }
+            70%  { top: -360px; }
+            75%  { top: -540px; }
+            95%  { top: -540px; }
+            100% { top: -720px; }
         }
     </style>
 </head>
 <body>
-    <h1>Hello world!</h1>
+    <div class="window">
+        <div class="box">
+            <p class="spring">SPRING</p>
+            <p class="summer">SUMMERR</p>
+            <p class="autumn">AUTUMN</p>
+            <p class="winter">WINTER</p>
+            <p class="spring">SPRING</p>
+        </div>
+    </div>
+    <div class="bc">
+        <img src="https://images.unsplash.com/photo-1459947727010-6267d2c1232f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1474925558543-e7a5f06e733e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1477420143023-6a0e0b04b69a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1490611938744-b7bfa268923e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1187&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1459947727010-6267d2c1232f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+    </div>
+    
 </body>
 </html>
